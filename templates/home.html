@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prediksi Gajimu</title>
+	<style type="text/css">
+	.login {
+		margin: 50px auto;
+		width: 500px;
+		height: 400px;
+		padding: 10px;
+		border: 5px solid #A0522D;
+	</style>
+</head>
+<body style="background: #E9967A;">
+	<div class="login">
+		<center><h1>Prediksi Gaji di Start-UP</h1></center>
+		<br> <br>
+		
+		<!-- Main Input For Receiving Query to our ML -->
+	<center><form action="{{ url_for('result')}}"method="post">
+	<label for="Nama Pekerjaan">Nama Pekerjaan</label>
+		<select id="Nama Pekerjaan" name="Nama Pekerjaan">
+		<option value="0">Account Executive</option>
+		<option value="1">Account Manager</option>
+		<option value="2">Accounting</option>
+		<option value="3">Administration</option>
+		<option value="4">Android Developer</option>
+		<option value="5">Area Manager</option>		
+		<option value="6">Auditor</option>
+		<option value="7">B2B Sales</option>
+		<option value="8">Back End Developer</option>		
+		<option value="9">Blockchain Engineer</option>
+		<option value="10">Brand Specialist</option>
+		<option value="11">Business Analyst</option>
+		<option value="12">Business Development</option>
+		<option value="13">Business Intelligence</option>
+		<option value="14">Business Operation</option>		
+		<option value="15">Business analyst</option>
+		<option value="16">Cloud Engineer</option>
+		<option value="17">Community Specialist</option>		
+		<option value="18">Content Creator</option>
+		<option value="19">Content Quality Assurance</option>
+		<option value="20">Content Writer</option>
+		<option value="21">Copy Writer</option>
+		<option value="22">Creative Designer</option>
+		<option value="23">Customer Service</option>		
+		<option value="24">Data Analyst</option>
+		<option value="25">Data Engineer</option>
+		<option value="26">Data Scientist</option>		
+		<option value="27">DevOps Engineer</option>
+		<option value="28">Digital Marketing</option>
+		<option value="29">Flutter Developer</option>		
+		<option value="30">Front End Developer</option>
+		<option value="31">Full Stack Developer</option>
+		<option value="32">Graphic Designer</option>		
+		<option value="33">Java Backend Developer</option>
+		<option value="34">Legal</option>
+		<option value="35">Marketing</option>
+		<option value="36">Marketing Communication</option>
+		<option value="37">Merchandiser</option>
+		<option value="38">Mobile Apps Developer</option>		
+		<option value="39">ODOO Developer</option>
+		<option value="40">Operation</option>
+		<option value="41">Partnership Specialist</option>		
+		<option value="42">People Operations</option>
+		<option value="43">Product Manager</option>
+		<option value="44">Product Marketing</option>
+		<option value="45">Product Owner</option>
+		<option value="46">Project Manager</option>
+		<option value="47">Quality Assurance</option>		
+		<option value="48">Quality Control</option>
+		<option value="49">React Developer</option>
+		<option value="50">SEO Specialist</option>			
+		<option value="51">Sales</option>
+		<option value="52">Scrum Master</option>
+		<option value="53">Social Media Specialist</option>		
+		<option value="54">Software Developer</option>
+		<option value="55">Software QA Engineer</option>
+		<option value="56">System Administrator</option>		
+		<option value="57">Talent Acquisition</option>
+		<option value="58">Tax Accounting</option>
+		<option value="59">Technical Lead</option>
+		<option value="60">Technical Writer</option>
+		<option value="61">Telemarketer</option>
+		<option value="62">UI/UX Designer</option>		
+		<option value="63">UX Researcher</option>
+		<option value="64">Video Editor</option>
+		<option value="65">Videographer</option>		
+		<option value="66">Web Developer</option>
+		<option value="67">iOS Developer</option> 				
+	</select>
+		<br>
+		<br>
+	<label for="Perusahaan">Perusahaan</label>
+	<select id="Perusahaan" name="Perusahaan">
+		<option value="0">101Wired</option>
+		<option value="1">99.co</option>
+		<option value="2">ABITECH</option>
+		<option value="3">ADAMAR Recruitment & Selection</option>
+		<option value="4">ADX</option>
+		<option value="5">ALIVEA PTE LTD</option>		
+		<option value="6">AN Consultant</option>
+		<option value="7">AVANA</option>
+		<option value="8">Achilles Systems (OnlinePajak)</option>
+		<option value="9">AiChat</option>
+		<option value="10">Algoritma</option>
+		<option value="11">Amartha</option>
+		<option value="12">Aming Coffee</option>
+		<option value="13">Andalin</option>
+		<option value="14">Antikode</option>
+		<option value="15">Artnexia</option>
+		<option value="16">AsiaCommerce</option>
+		<option value="17">Aspire</option>		
+		<option value="18">Attenza</option>
+		<option value="19">BFITech</option>
+		<option value="20">Bagidata</option>
+		<option value="21">Beli Bitcoin</option>
+		<option value="22">Belipart</option>
+		<option value="23">Berkah Putra Mandala Group</option>	
+		<option value="24">Bhinneka</option>
+		<option value="25">Bibit</option>
+		<option value="26">Bibit.id</option>
+		<option value="27">BigBox  Telkom</option>
+		<option value="28">Binar Academy</option>
+		<option value="29">Bitocto</option>		
+		<option value="30">Blankpage Indonesia</option>
+		<option value="31">Blitzkrieg</option>
+		<option value="32">Boleh Dicoba Digital</option>
+		<option value="33">Brick</option>
+		<option value="34">CROWDE</option>
+		<option value="35">CV. Mitra Solusindo</option>	
+		<option value="36">Cakap</option>
+		<option value="37">ChatAja</option>
+		<option value="38">Chilibeli</option>
+		<option value="39">Coinvestasi</option>
+		<option value="40">Collab Asia</option>
+		<option value="41">DEPATU (PT. Kreativitas Aset Indonesia)</option>		
+		<option value="42">DOMPET KILAT</option>
+		<option value="43">DOOgether</option>
+		<option value="44">DataOn Corp</option>
+		<option value="45">Dbrandcom</option>
+		<option value="46">Deliveree Indonesia</option>
+		<option value="47">Delman.io</option>	
+		<option value="48">Diacon Technologies</option>
+		<option value="49">Diary Bunda</option>
+		<option value="50">Digitala</option>
+		<option value="51">DomaiNesia</option>
+		<option value="52">DreamTalent</option>
+		<option value="53">Dreamaxtion</option>		
+		<option value="54">EMORY STYLE</option>
+		<option value="55">Ellen May Institute</option>
+		<option value="56">Ematic Solutions</option>
+		<option value="57">Embreo Pte Ltd</option>
+		<option value="58">Evermos</option>
+		<option value="59">FOOM Lab Global</option>	
+		<option value="60">FUSE</option>
+		<option value="61">Female Daily Network</option>
+		<option value="62">Flip</option>
+		<option value="63">Flolab</option>
+		<option value="64">Forstok</option>
+		<option value="65">Foxel Digital Indonesia</option>		
+		<option value="66">GOODSTUPH</option>
+		<option value="67">GTech Digital Asia</option>
+		<option value="68">Garda Medica</option>
+		<option value="69">Gigacover</option>
+		<option value="70">Gitrys</option>
+		<option value="71">Glints</option>	
+		<option value="72">GoWork</option>
+		<option value="73">GrobMedia</option>
+		<option value="74">Grobmart.com</option>
+		<option value="75">Gushcloud Indonesia</option>
+		<option value="76">Halodoc ID</option>
+		<option value="77">Hangry</option>		
+		<option value="78">Happy5</option>
+		<option value="79">Homebase</option>
+		<option value="80">Hubton Indonesia</option>
+		<option value="81">Hungree</option>
+		<option value="82">HuntStreet</option>
+		<option value="83">IDS | International Design School</option>	
+		<option value="84">Ifonic</option>
+		<option value="85">IndoTrading.com</option>
+		<option value="86">Indomobil Sukses Int.</option>
+		<option value="87">Indonesia Premium Goods</option>
+		<option value="88">Indopasifik Teknologi Medika Indonesia</option>
+		<option value="89">Innov8tif Karta Solusi</option>		
+		<option value="90">Inovasi Setia</option>
+		<option value="91">JULO</option>
+		<option value="92">JWALAKU</option>
+		<option value="93">Jakmall</option>
+		<option value="94">Jubelio</option>
+		<option value="95">Kapital Boost Indonesia</option>	
+		<option value="96">Kargo Technologies</option>
+		<option value="97">Ketapel.ID</option>
+		<option value="98">KoinWorks</option>
+		<option value="99">Kopral Indonesia</option>
+		<option value="100">KreasITindo</option>
+		<option value="101">Kulina</option>
+		<option value="102">LARUNOCOM</option>
+		<option value="103">Lacak.io</option>
+		<option value="104">Laku6 (Rebonics)</option>
+		<option value="105">Lemonilo</option>		
+		<option value="106">Lion Parcel</option>
+		<option value="107">Lokassa</option>
+		<option value="108">Lunch Actually</option>
+		<option value="109">MC Payment Indonesia</option>
+		<option value="110">MINDLAB</option>
+		<option value="111">Mandreel</option>
+		<option value="112">Mathpresso (QANDA)</option>
+		<option value="113">Mecapan Indonesia</option>
+		<option value="114">Mediatics Digital Indonesia</option>
+		<option value="115">Megawastu Solusindo</option>
+		<option value="116">Mekari (PT. Mid Solusi Nusantara)</option>
+		<option value="117">Member.id</option>		
+		<option value="118">My Alpha Network</option>
+		<option value="119">Mykoon (Spoon Radio)</option>
+		<option value="120">NF Juara</option>
+		<option value="121">NRI Indonesia</option>
+		<option value="122">NUTRIFIT INDONESIA</option>
+		<option value="123">Nectico</option>	
+		<option value="124">Neuro.net</option>
+		<option value="125">Nodeflux Teknologi Indonesia</option>
+		<option value="126">NuWorq</option>
+		<option value="127">NusaTalent</option>
+		<option value="128">OEYMedia</option>
+		<option value="129">OKHOME</option>		
+		<option value="130">OTORAJA Network Indonesia</option>
+		<option value="131">Octagon Studio Ltd.</option>
+		<option value="132">Onoff Insurance</option>
+		<option value="133">OrderDrive</option>
+		<option value="134">PT Aiskor Teknologi Indonesia</option>
+		<option value="135">PT Ayo Blajar Indonesia</option>	
+		<option value="136">PT Cerita Teknologi Indonesia</option>
+		<option value="137">PT Cerita Teknologi Indonesia</option>
+		<option value="138">PT ETHIS FINTEK INDONESIA</option>
+		<option value="139">PT Ecodoe Widya Candia Internasional</option>
+		<option value="140">PT Five Jack (Itemku)</option>
+		<option value="141">PT Formasi Agung Selaras (Famous Allstars)</option>		
+		<option value="142">PT HIGO FITUR INDONESIA</option>
+		<option value="143">PT Hermes Solusi Integrasi</option>
+		<option value="144">PT Inovasi Sukses Sentosa</option>
+		<option value="145">PT Kanvas Ruang Kantor Osvas</option>
+		<option value="146">PT Khazanah Prima Sukses</option>
+		<option value="147">PT Mitra Mulia Manunggal</option>	
+		<option value="148">PT NUSANTARA SUKSES TEKNOLOGI</option>
+		<option value="149">PT Pefindo Biro Kredit</option>
+		<option value="150">PT Rate Teknologi Indonesia</option>
+		<option value="151">PT Reeracoen Indonesia</option>
+		<option value="152">PT Rekeningku Dotcom Indonesia</option>
+		<option value="153">PT Rute Lintas Indonesia</option>		
+		<option value="154">PT Sarana Media Selular</option>
+		<option value="155">PT Soluix Finteknologi Indonesia</option>
+		<option value="156">PT Swift Logistics Solutions</option>
+		<option value="157">PT Talentvis</option>
+		<option value="158">PT Transcosmos Commerce</option>
+		<option value="159">PT WHIM Management Indonesia (Evos E-sports)</option>	
+		<option value="160">PT Wahana Semesta Ilmu</option>
+		<option value="161">PT Xapiens Teknologi Indonesia</option>
+		<option value="162">PT. Ammana Fintek Syariah</option>
+		<option value="163">PT. Asiapay Technology Indonesia</option>
+		<option value="164">PT. Ayo Blajar Indonesia</option>
+		<option value="165">PT. Digital Sarana Legoas</option>		
+		<option value="166">PT. Eden Pangan Indonesia (Eden Farm)</option>
+		<option value="167">PT. HAO SHENG TRADING</option>
+		<option value="168">PT. Internet Madju Abad Milenindo</option>
+		<option value="169">PT. Investo Medika Asia</option>
+		<option value="170">PT. Jakarta Notebook</option>
+		<option value="171">PT. Loyal Member Indonesia</option>	
+		<option value="172">PT. Mikatasa Agung</option>
+		<option value="173">PT. Modifikasi Dotcom Indonesia</option>
+		<option value="174">PT. Mplus Solusi Perdana</option>
+		<option value="175">PT. Profescipta Wahana Tehnik</option>
+		<option value="176">PT. Rekruter Digital Indonesia</option>
+		<option value="177">PT. Sinbad Karya Pedagangan</option>		
+		<option value="178">PT. Snap Innovations Indonesia</option>
+		<option value="179">PT. Swirf Labs International</option>
+		<option value="180">PT. YUKK Kreasi Indonesia</option>
+		<option value="181">PTS.sc</option>
+		<option value="182">Pakaian Anak Bangsa</option>
+		<option value="183">Pandatech</option>	
+		<option value="184">Partipost Indonesia</option>
+		<option value="185">Pasifik Satelit Nusantara</option>
+		<option value="186">Planet Partnerships</option>
+		<option value="187">Pomona</option>
+		<option value="188">Popcult Group</option>
+		<option value="189">Presentation Design Co</option>		
+		<option value="190">Printerous</option>
+		<option value="191">Pt Barakah Teknologi Indonesia</option>
+		<option value="192">REEF - Renewable Energy Financing</option>
+		<option value="193">Rajawali Kapital Berjangka</option>
+		<option value="194">Ralali</option>
+		<option value="195">RebelWorks</option>	
+		<option value="196">Ritase</option>
+		<option value="197">Rocketindo</option>
+		<option value="198">Rukita</option>
+		<option value="199">Rupi Digital Indonesia</option>
+		<option value="200">SMART Customs</option>
+		<option value="201">SRWnCo</option>
+		<option value="202">SaKoO</option>
+		<option value="203">Sagara Technology Group</option>
+		<option value="204">Sampingan</option>
+		<option value="205">Sci Ecommerce</option>		
+		<option value="206">Scola Bandung</option>
+		<option value="207">Security Research Labs [Indonesia]</option>
+		<option value="208">SehatQ</option>
+		<option value="209">Sejahtera Group</option>
+		<option value="210">Sinarmaju Electronics</option>
+		<option value="211">SmartEye.id</option>
+		<option value="212">Snipeyes</option>
+		<option value="213">Sobat Teknologi Indonesia</option>
+		<option value="214">Sobat.co.id</option>
+		<option value="215">Socialights Indonesia</option>
+		<option value="216">Soyaka AI (Shox)</option>
+		<option value="217">SpaceStock</option>		
+		<option value="218">Stockbit</option>
+		<option value="219">Storial.co</option>
+		<option value="220">Studio Lengua</option>
+		<option value="221">Sugarlive ID</option>
+		<option value="222">Surplus Indonesia</option>
+		<option value="223">Swap Energi Indonesia</option>	
+		<option value="224">SweetEscape</option>
+		<option value="225">TADA</option>
+		<option value="226">TabSquare</option>
+		<option value="227">Tabula</option>
+		<option value="228">Tamasia Global Sharia</option>
+		<option value="229">Tebengan</option>		
+		<option value="230">Tech in Asia Indonesia</option>
+		<option value="231">Teknologi Mandiri Indonesia</option>
+		<option value="232">Teltics Media</option>
+		<option value="233">The Womyn</option>
+		<option value="234">Tirto ID</option>
+		<option value="235">Tradaru</option>	
+		<option value="236">Tunaiku</option>
+		<option value="237">Ufirst</option>
+		<option value="238">VhiWEB</option>
+		<option value="239">W Stand For Woman</option>
+		<option value="240">WEPLUS Smart Insurance</option>
+		<option value="241">WIR Global</option>		
+		<option value="242">Waktukita.com</option>
+		<option value="243">Wave Consulting</option>
+		<option value="244">Xfers</option>
+		<option value="245">YONK</option>
+		<option value="246">Yayasan Benih Baik Indonesia</option>
+		<option value="247">Yummy Corp</option>	
+		<option value="248">Zen Rooms</option>
+		<option value="249">Zettagrid Indonesia</option>
+		<option value="250">Zi.Care</option>
+		<option value="251">bumi.ai</option>
+		<option value="252">detik.com</option>
+		<option value="253">flitts</option>		
+		<option value="254">iSeller</option>
+		<option value="255">kelas.com</option>
+		<option value="256">myrobin.id</option>
+		<option value="257">mytripology</option>
+		<option value="258">one smart online</option>
+		<option value="259">theAsianparent</option>	
+		<option value="260">tomps.id</option>
+	</select>
+		<br>
+		<br>
+	<label for="Fungsi Pekerjaan">Fungsi Pekerjaan</label>
+	<select id="Fungsi Pekerjaan" name="Fungsi Pekerjaan">
+		<option value="0">Administrative & Clerical</option>
+		<option value="1">Community Management</option>
+		<option value="2">Customer Service</option>
+		<option value="3">Data & Analytics</option>
+		<option value="4">DevOps & Cloud Management</option>
+		<option value="5">Enterprise Software & Systems</option>		
+		<option value="6">Finance, Legal & Accounting</option>
+		<option value="7">Graphic & Motion Design</option>
+		<option value="8">Human Resources</option>
+		<option value="9">Human Resources</option>
+		<option value="10">Marketing & PR</option>
+		<option value="11">Media & Journalism</option>
+		<option value="12">Mobile Development</option>
+		<option value="13">Project & Product Management</option>
+		<option value="14">QA & Testing</option>
+		<option value="15">Retail & Wholesale</option>
+		<option value="16">Sales & Business Development</option>
+		<option value="17">UX/UI Design</option>		
+		<option value="18">Web Development</option>
+	</select>
+		<br>
+		<br>
+	<label for="Tipe Industri">Tipe Industri</label>
+	<select id="Tipe Industri" name="Tipe Industri">
+		<option value="0">3D, 3D Technology</option>
+		<option value="1">Accelerator/Incubator, Web Development</option>
+		<option value="2">Advertising</option>
+		<option value="3">Advertising Exchanges, Advertising Platforms</option>
+		<option value="4">Advertising, Digital Media</option>
+		<option value="5">App Marketing</option>		
+		<option value="6">Artificial Intelligence</option>
+		<option value="7">Artificial Intelligence, Marketplaces (general)</option>
+		<option value="8">Automotive</option>
+		<option value="9">B2B ecommerce</option>
+		<option value="10">Big Data</option>
+		<option value="11">Brand Marketing</option>
+		<option value="12">Broadcasting</option>
+		<option value="13">Business Analytics</option>
+		<option value="14">Chemicals</option>
+		<option value="15">Clean Energy</option>
+		<option value="16">Clean Technology IT</option>
+		<option value="17">Cloud Infrastructure</option>		
+		<option value="18">Cloud Infrastructure, IaaS</option>
+		<option value="19">Commodities</option>
+		<option value="20">Communities, Reviews & Recommendations</option>
+		<option value="21">Consulting</option>
+		<option value="22">Consumer Electronics</option>
+		<option value="23">Cosmetics</option>	
+		<option value="24">Coworking</option>
+		<option value="25">Creative</option>
+		<option value="26">Crowdfunding</option>
+		<option value="27">Cryptocurrency</option>
+		<option value="28">Cyber Security</option>
+		<option value="29">Data Science</option>		
+		<option value="30">Data Science, Machine Learning</option>
+		<option value="31">Designers</option>
+		<option value="32">Designers, 3D Technology</option>
+		<option value="33">Dietary Supplements</option>
+		<option value="34">Digital Media</option>
+		<option value="35">Digital Media, IT & Cybersecurity</option>	
+		<option value="36">Digital Media, Internet Marketing</option>
+		<option value="37">Digital Media, Online Video Advertising</option>
+		<option value="38">Digital Media, Social Networking</option>
+		<option value="39">Ecommerce aggregators</option>
+		<option value="40">Ecommerce logistics</option>
+		<option value="41">Ecommerce seller tools and services</option>		
+		<option value="42">Education Tech</option>
+		<option value="43">Email Marketing, SaaS</option>
+		<option value="44">Energy Efficiency</option>
+		<option value="45">Enterprise Application</option>
+		<option value="46">Enterprise Software</option>
+		<option value="47">Enterprise Software, Human Resource</option>	
+		<option value="48">Entertainment Industry</option>
+		<option value="49">Fashion</option>
+		<option value="50">Financial accounting and admin</option>
+		<option value="51">Financial exchanges</option>
+		<option value="52">Fitness</option>
+		<option value="53">Graphics, Designers</option>		
+		<option value="54">Hardware & Software</option>
+		<option value="55">Health & Insurance</option>
+		<option value="56">Health & Insurance, Marketplaces</option>
+		<option value="57">Health & Wellness</option>
+		<option value="58">Health Care</option>
+		<option value="59">Healthcare Services</option>	
+		<option value="60">Hotels & Accomodation</option>
+		<option value="61">Human Resource</option>
+		<option value="62">Human Resource, Learning Management</option>
+		<option value="63">IT & Cybersecurity</option>
+		<option value="64">Image Recognition</option>
+		<option value="65">Industrial Energy Efficiency</option>		
+		<option value="66">Insurance tech</option>
+		<option value="67">Interface Design, Web Development</option>
+		<option value="68">Internet</option>
+		<option value="69">Internet Technology</option>
+		<option value="70">Internet Technology, Restaurants & Food</option>
+		<option value="71">Internet of Things</option>	
+		<option value="72">Investment tools and platforms</option>
+		<option value="73">Learning Management</option>
+		<option value="74">Lending, loans, and credit</option>
+		<option value="75">Lifestyle Businesses</option>
+		<option value="76">Logistics</option>
+		<option value="77">Marketplaces</option>		
+		<option value="78">Marketplaces (Property)</option>
+		<option value="79">Marketplaces (automobiles)</option>
+		<option value="80">Marketplaces (fashion and beauty)</option>
+		<option value="81">Marketplaces (food)</option>
+		<option value="82">Marketplaces (general)</option>
+		<option value="83">Marketplaces (general), Commodities</option>	
+		<option value="84">Marketplaces (general), Marketplaces</option>
+		<option value="85">Marketplaces (general), User Experience Design</option>
+		<option value="86">Marketplaces (miscellaneous niche)</option>
+		<option value="87">Marketplaces, App Discovery</option>
+		<option value="88">Mobile Enterprise, Creative Development</option>
+		<option value="89">News</option>		
+		<option value="90">News, Digital Media</option>
+		<option value="91">Online Dating</option>
+		<option value="92">Online Travel, Internet Technology</option>
+		<option value="93">Payments and remittance</option>
+		<option value="94">Photography</option>
+		<option value="95">Professional Networking</option>	
+		<option value="96">Property</option>
+		<option value="97">Restaurants & Food</option>
+		<option value="98">Retail (consumer electronics)</option>
+		<option value="99">Retail (food)</option>
+		<option value="100">Retail (general)</option>
+		<option value="101">Retail (general), Internet Technology</option>
+		<option value="102">SaaS</option>
+		<option value="103">SaaS, Internet Technology</option>
+		<option value="104">SaaS, Retail (general)</option>
+		<option value="105">Service Providers</option>		
+		<option value="106">Services</option>
+		<option value="107">Social Media Advertising</option>
+		<option value="108">Social Media Marketing</option>
+		<option value="109">Social Media Marketing, Creative</option>
+		<option value="110">Social Media Platforms</option>
+		<option value="111">Social Recruiting</option>
+		<option value="112">Software</option>
+		<option value="113">Software Compliance</option>
+		<option value="114">Software, Enterprise Resource Planning</option>
+		<option value="115">Software, IT & Cybersecurity</option>
+		<option value="116">Software, Internet Marketing</option>
+		<option value="117">Tech Learning</option>		
+		<option value="118">Telecommunications</option>
+		<option value="119">Transportation</option>
+		<option value="120">Travel & Tourism</option>
+		<option value="121">User Experience Design, Product Design</option>
+		<option value="122">Virtual Reality (VR)</option>
+		<option value="123">Web</option>	
+		<option value="124">Web Design</option>
+		<option value="125">Web Development, Accelerator/Incubator</option>
+		<option value="126">Web Development, Hardware & Software</option>
+		<option value="127">Web Development, Marketplaces (general)</option>
+		<option value="128">Web Hosting, Web Development</option>		
+	</select>
+		<br>
+		<br>
+	<label for="Pengalaman Kerja">Pengalaman Kerja</label>
+	<select id="Pengalaman Kerja" name="Pengalaman Kerja">
+		<option value="3">Less than 1 year</option>
+		<option value="0">1 to 4 years</option>
+		<option value="1">4 to 7 years</option>
+		<option value="2">7 to 10 years</option>
+		</select>
+		<br>
+		<br>
+	<input type="submit" value="Prediksi">
+	</form> </center>
+
+	<br>
+	<center><h4>{{ result_text }}</h4></center>
+	
+	</div>
+	<div style='text-align:center;'>
+	<a href="https://www.techinasia.com/jobs/search?country_name[]=Indonesia">Cari Kerja Sekarang</a>
+	</div>
+</body>
+</html>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
