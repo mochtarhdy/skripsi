@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prediksi Gajimu</title>
+	<style type="text/css">
+	.login {
+		margin: 50px auto;
+		width: 500px;
+		height: 400px;
+		padding: 10px;
+		border: 5px solid #A0522D;
+	</style>
+</head>
+<body style="background: #E9967A;">
+	<div class="login">
+		<center><h1>Prediksi Gaji di Start-UP</h1></center>
+		<br> <br>
+		
+		<!-- Main Input For Receiving Query to our ML -->
+	<center><form action="{{ url_for('result')}}"method="post">
+	<label for="Nama Pekerjaan">Nama Pekerjaan</label>
+		<select id="Nama Pekerjaan" name="Nama Pekerjaan">
+		<option value="0">Account Executive</option>
+		<option value="1">Account Manager</option>
+		<option value="2">Accounting</option>
+		<option value="3">Administration</option>
+		<option value="4">Android Developer</option>
+		<option value="5">Area Manager</option>		
+		<option value="6">Auditor</option>
+		<option value="7">B2B Sales</option>
+		<option value="8">Back End Developer</option>		
+		<option value="9">Blockchain Engineer</option>
+		<option value="10">Brand Specialist</option>
+		<option value="11">Business Analyst</option>
+		<option value="12">Business Development</option>
+		<option value="13">Business Intelligence</option>
+		<option value="14">Business Operation</option>		
+		<option value="15">Chief Technology Officer</option>
+		<option value="16">City Deployment Coordinator</option>
+		<option value="17">Cloud Engineer</option>
+		<option value="18">Community Specialist</option>		
+		<option value="19">Content Creator</option>
+		<option value="20">Content Quality Assurance</option>
+		<option value="21">Content Writer</option>
+		<option value="22">Copy Writer</option>
+		<option value="23">Corporate Legal</option>
+		<option value="24">Creative Designer</option>
+		<option value="25">Credit Risk Analyst</option>
+		<option value="26">Customer Service</option>		
+		<option value="27">Data Analyst</option>
+		<option value="28">Data Engineer</option>
+		<option value="29">Data Scientist</option>		
+		<option value="30">DevOps Engineer</option>
+		<option value="31">Digital Marketing</option>
+		<option value="32">Digital Surveillance</option>
+		<option value="33">Financial Advisor</option>
+		<option value="34">Flutter Developer</option>		
+		<option value="35">Front End Developer</option>
+		<option value="36">Full Stack Developer</option>
+		<option value="37">Graphic Designer</option>		
+		<option value="38">Java Backend Developer</option>
+		<option value="39">Legal</option>
+		<option value="40">Marketing</option>
+		<option value="41">Marketing Communication</option>
+		<option value="42">Merchandiser</option>
+		<option value="44">Mobile Apps Developer</option>		
+		<option value="45">ODOO Developer</option>
+		<option value="46">Operation</option>
+		<option value="47">Partnership Specialist</option>		
+		<option value="48">People Operations</option>
+		<option value="49">Product Manager</option>
+		<option value="50">Product Marketing</option>
+		<option value="51">Product Owner</option>
+		<option value="52">Project Manager</option>
+		<option value="53">Quality Assurance</option>		
+		<option value="54">Quality Control</option>
+		<option value="55">React Developer</option>
+		<option value="56">Research Analyst</option>
+		<option value="57">SEO Specialist</option>			
+		<option value="58">Sales</option>
+		<option value="59">Scrum Master</option>
+		<option value="60">Social Media Specialist</option>		
+		<option value="61">Software Developer</option>
+		<option value="62">Software QA Engineer</option>
+		<option value="64">System Administrator</option>		
+		<option value="65">Talent Acquisition</option>
+		<option value="66">Tax Accounting</option>
+		<option value="67">Technical Lead</option>
+		<option value="68">Technical Writer</option>
+		<option value="69">Telemarketer</option>
+		<option value="70">UI/UX Designer</option>		
+		<option value="71">UX Researcher</option>
+		<option value="72">Video Editor</option>
+		<option value="73">Videographer</option>		
+		<option value="74">Web Developer</option>
+		<option value="75">iOS Developer</option> 				
+	</select>
+		<br>
+		<br>
+	<label for="Pengalaman Kerja">Pengalaman Kerja</label>
+	<select id="Pengalaman Kerja" name="Pengalaman Kerja">
+		<option value="3">Less than 1 year</option>
+		<option value="0">1 to 4 years</option>
+		<option value="1">4 to 7 years</option>
+		<option value="2">7 to 10 years</option>
+		</select>
+		<br>
+		<br>
+	<label for="Tipe Industri">Tipe Industri</label>
+	<select id="Tipe Industri" name="Tipe Industri">
+		<option value="0">3D, 3D Technology</option>
+		<option value="1">Accelerator/Incubator, Web Development</option>
+		<option value="2">Advertising</option>
+		<option value="3">Advertising Exchanges, Advertising Platforms</option>
+		<option value="4">Advertising, Digital Media</option>
+		<option value="5">App Marketing</option>		
+		<option value="6">Artificial Intelligence</option>
+		<option value="7">Artificial Intelligence, Marketplaces (general)</option>
+		<option value="8">Automotive</option>
+		<option value="9">B2B ecommerce</option>
+		<option value="10">Big Data</option>
+		<option value="11">Brand Marketing</option>
+		<option value="12">Broadcasting</option>
+		<option value="13">Business Analytics</option>
+		<option value="14">Chemicals</option>
+		<option value="15">Clean Energy</option>
+		<option value="16">Clean Technology IT</option>
+		<option value="17">Cloud Infrastructure</option>		
+		<option value="18">Cloud Infrastructure, IaaS</option>
+		<option value="19">Commodities</option>
+		<option value="20">Communities, Reviews & Recommendations</option>
+		<option value="21">Consulting</option>
+		<option value="22">Consumer Electronics</option>
+		<option value="23">Cosmetics</option>	
+		<option value="24">Coworking</option>
+		<option value="25">Creative</option>
+		<option value="26">Crowdfunding</option>
+		<option value="27">Cryptocurrency</option>
+		<option value="28">Cyber Security</option>
+		<option value="29">Data Science</option>		
+		<option value="30">Data Science, Machine Learning</option>
+		<option value="31">Designers</option>
+		<option value="32">Designers, 3D Technology</option>
+		<option value="33">Dietary Supplements</option>
+		<option value="34">Digital Media</option>
+		<option value="35">Digital Media, IT & Cybersecurity</option>	
+		<option value="36">Digital Media, Internet Marketing</option>
+		<option value="37">Digital Media, Online Video Advertising</option>
+		<option value="38">Digital Media, Social Networking</option>
+		<option value="39">Ecommerce aggregators</option>
+		<option value="40">Ecommerce logistics</option>
+		<option value="41">Ecommerce seller tools and services</option>		
+		<option value="42">Education Tech</option>
+		<option value="43">Email Marketing, SaaS</option>
+		<option value="44">Energy Efficiency</option>
+		<option value="45">Enterprise Application</option>
+		<option value="46">Enterprise Software</option>
+		<option value="47">Enterprise Software, Human Resource</option>	
+		<option value="48">Entertainment Industry</option>
+		<option value="49">Fashion</option>
+		<option value="50">Financial accounting and admin</option>
+		<option value="51">Financial exchanges</option>
+		<option value="52">Fitness</option>
+		<option value="53">Graphics, Designers</option>		
+		<option value="54">Hardware & Software</option>
+		<option value="55">Health & Insurance</option>
+		<option value="56">Health & Insurance, Marketplaces</option>
+		<option value="57">Health & Wellness</option>
+		<option value="58">Health Care</option>
+		<option value="59">Healthcare Services</option>	
+		<option value="60">Hotels & Accomodation</option>
+		<option value="61">Human Resource</option>
+		<option value="62">Human Resource, Learning Management</option>
+		<option value="63">IT & Cybersecurity</option>
+		<option value="64">Image Recognition</option>
+		<option value="65">Industrial Energy Efficiency</option>		
+		<option value="66">Insurance tech</option>
+		<option value="67">Interface Design, Web Development</option>
+		<option value="68">Internet</option>
+		<option value="69">Internet Technology</option>
+		<option value="70">Internet Technology, Restaurants & Food</option>
+		<option value="71">Internet of Things</option>	
+		<option value="72">Investment tools and platforms</option>
+		<option value="73">Learning Management</option>
+		<option value="74">Lending, loans, and credit</option>
+		<option value="75">Lifestyle Businesses</option>
+		<option value="76">Logistics</option>
+		<option value="77">Marketplaces</option>		
+		<option value="78">Marketplaces (Property)</option>
+		<option value="79">Marketplaces (automobiles)</option>
+		<option value="80">Marketplaces (fashion and beauty)</option>
+		<option value="81">Marketplaces (food)</option>
+		<option value="82">Marketplaces (general)</option>
+		<option value="83">Marketplaces (general), Commodities</option>	
+		<option value="84">Marketplaces (general), Marketplaces</option>
+		<option value="85">Marketplaces (general), User Experience Design</option>
+		<option value="86">Marketplaces (miscellaneous niche)</option>
+		<option value="87">Marketplaces, App Discovery</option>
+		<option value="88">Mobile Enterprise, Creative Development</option>
+		<option value="89">News</option>		
+		<option value="90">News, Digital Media</option>
+		<option value="91">Online Dating</option>
+		<option value="92">Online Travel, Internet Technology</option>
+		<option value="93">Payments and remittance</option>
+		<option value="94">Photography</option>
+		<option value="95">Professional Networking</option>	
+		<option value="96">Property</option>
+		<option value="97">Restaurants & Food</option>
+		<option value="98">Retail (consumer electronics)</option>
+		<option value="99">Retail (food)</option>
+		<option value="100">Retail (general)</option>
+		<option value="101">Retail (general), Internet Technology</option>
+		<option value="102">SaaS</option>
+		<option value="103">SaaS, Internet Technology</option>
+		<option value="104">SaaS, Retail (general)</option>
+		<option value="105">Service Providers</option>		
+		<option value="106">Services</option>
+		<option value="107">Social Media Advertising</option>
+		<option value="108">Social Media Marketing</option>
+		<option value="109">Social Media Marketing, Creative</option>
+		<option value="110">Social Media Platforms</option>
+		<option value="111">Social Recruiting</option>
+		<option value="112">Software</option>
+		<option value="113">Software Compliance</option>
+		<option value="114">Software, Enterprise Resource Planning</option>
+		<option value="115">Software, IT & Cybersecurity</option>
+		<option value="116">Software, Internet Marketing</option>
+		<option value="117">Tech Learning</option>		
+		<option value="118">Telecommunications</option>
+		<option value="119">Transportation</option>
+		<option value="120">Travel & Tourism</option>
+		<option value="121">User Experience Design, Product Design</option>
+		<option value="122">Virtual Reality (VR)</option>
+		<option value="123">Web</option>	
+		<option value="124">Web Design</option>
+		<option value="125">Web Development, Accelerator/Incubator</option>
+		<option value="126">Web Development, Hardware & Software</option>
+		<option value="127">Web Development, Marketplaces (general)</option>
+		<option value="128">Web Hosting, Web Development</option>		
+	</select>
+		<br>
+		<br>
+	<label for="Ukuran Perusahaan">Ukuran Perusahaan</label>
+	<select id="Perusahaan" name="Perusahaan">
+		<option value="3">2 - 10</option>
+		<option value="2">11 - 50</option>
+		<option value="6">51 - 100</option>
+		<option value="1">101 - 200</option>
+		<option value="4">201 - 500</option>
+		<option value="5">501 - 1000</option>		
+		<option value="0">1001 - 5000</option>
+	</select>
+		<br>
+		<br>
+	<input type="submit" value="Prediksi">
+	</form> </center>
+
+	<br>
+	<center><h4>{{ result_text }}</h4></center>
+	
+	</div>
+	<div style='text-align:center;'>
+	<a href="https://www.techinasia.com/jobs/search?country_name[]=Indonesia">Cari Kerja Sekarang</a>
+	</div>
+</body>
+</html>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
