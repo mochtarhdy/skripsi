@@ -19,7 +19,7 @@ app = Flask(__name__, template_folder='templates')
 def student():
     return render_template("home.html")
 def ValuePredictor(to_predict_list):
-    to_predict = np.array(to_predict_list).reshape(1,5)
+    to_predict = np.array(to_predict_list).reshape(1,4)
     loaded_model = pickle.load(open("model.pkl","rb"))
     result = loaded_model.predict(to_predict)
     return round(result[0],2)
